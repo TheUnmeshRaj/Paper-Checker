@@ -1,0 +1,31 @@
+Suggestion: 
+
+Next time, we can implement the form that is being filled by the students, and upon filling, they will get a QR code generated with their details. They will bring this which could act like hall ticket, and it will be attached to their OMR sheet.
+
+Why do this?
+
+After checking numerous papers, we identified one common problem: handwriting, which can cause issues while entering phone numbers and email IDs. Even if we get the names and branch wrong, that’s not a big deal, but phone numbers and emails are crucial.
+
+-----------------------------------------------------------------------------------------------------------
+
+2nd Suggestion
+
+Implement an automatic OMR scanner so we can simply get the OMR scanned and retrieve the marks. And as Krishna Bhaiya told us, during their time, they uploaded the marks for each question which we can implement that too.
+
+So how will this work?
+
+Basically, the student brings in their QR code, which acts as their hall ticket. This will later be stapled to the OMR sheet (we will still keep the option to fill the student’s name by hand too, for backup).
+
+For the evaluation, the interface is going to contain 2 parts:
+
+1. First, scan the QR code, which fills in the student details.
+2. Second, scan the OMR sheet, which fills in the marks partwise or question number wise, whichever is needed.
+3. This will all be stored in a table which can later be added to a google sheets or if possible, we will try to directly send it on the google form
+
+-----------------------------------------------------------------------------------------------------------
+
+3rd Suggestion
+
+Manually check Part C because it contains coding questions.
+
+-----------------------------------------------------------------------------------------------------------
