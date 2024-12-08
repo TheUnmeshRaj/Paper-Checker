@@ -3,15 +3,12 @@ import numpy as np
 
 import utils
 
-webCamFeed = True
 pathImage = "1.jpg"
-cap = cv2.VideoCapture(0)
-cap.set(10,160)
 heightImg = 700
 widthImg  = 700
 questions=5
 choices=5
-ans= [1,2,0,2,4]
+ans= [1,3,2,1,4]
 
 
 count=0
@@ -33,7 +30,7 @@ while True:
         contours, hierarchy = cv2.findContours(imgCanny, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE) 
         cv2.drawContours(imgContours, contours, -1, (0, 255, 0), 10) 
         rectCon = utils.rectContour(contours) 
-        biggestPoints= utils.getCornerPoints(rectCon[1]) 
+        biggestPoints= utils.getCornerPoints(rectCon[0]) 
         gradePoints = utils.getCornerPoints(rectCon[0]) 
 
         

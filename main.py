@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-import util
+import utils
 
 path = "1.jpg"
 widthImage = 700
@@ -22,19 +22,19 @@ try:
   cv2.drawContours(imgContours,contours,-1,(0,255,0),1)
 
   # FINDING RECTANGLES
-  rectContour = util.rectContours(contours)
+  rectContour = utils.rectContours(contours)
   PartA = rectContour[0]
   PartB = rectContour[1]
 
   if PartA.size != 0 and PartB.size != 0:
-    PartA=util.reorder(PartA)
+    PartA=utils.reorder(PartA)
     cv2.drawContours(imgBiggestContours,PartA,-1,(0,255,0),10)
     pts1 = np.float32(PartA) 
     pts2 = np.float32([[0, 0],[widthImage, 0], [0, heightImage],[widthImage, heightImage]]) 
     matrix = cv2.getPerspectiveTransform(pts1, pts2) 
     imgWarpA = cv2.warpPerspective(img, matrix, (widthImage, heightImage)) 
     
-    PartB=util.reorder(PartB)
+    PartB=utils.reorder(PartB)
     cv2.drawContours(imgBiggestContours,PartB,-1,(0,0,255),10)
     ptsB1 = np.float32(PartB) 
     ptsB2 = np.float32([[0, 0],[widthImage, 0], [0, heightImage],[widthImage, heightImage]]) 
@@ -52,10 +52,7 @@ try:
     imageArray = ([img,imgGray,imgCanny,imgContours],
               [imgBiggestContours,imgThreshA,imgThreshB,imgBlank])
     
-    boxes = util.splitBoxes(imgThreshB)
-    cv2.imshow("Test",boxes[0])
-    cv2.imshow("Test",boxes[1])
-    cv2.imshow("Test",boxes[2])
+    boxes = utils.splitBoxes(imgThreshB)
     cv2.imshow("Test",boxes[3])
 except:
   imgBlank = np.zeros_like(img)
@@ -66,6 +63,6 @@ except:
 labels = [["Original","Gray","Edges","Contours"],
             ["Biggest Contour","PART A","PART B","Final"]]
 
-imgStacked = util.stackImage(imageArray,0.5,labels)
+imgStacked = utils.stackImage(imageArray,0.5,labels)
 cv2.imshow("All",imgThreshB)
 cv2.waitKey(0)
