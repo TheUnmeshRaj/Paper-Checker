@@ -43,10 +43,10 @@ questions, choices = 5, 5
 
 SetA = [
     [2, 3, 4, 2, 3],  # Part A - 1-5
-    [1, 3, 2, 3, 1],  # Part A - 11-15
-    [2, 3, 1, 3, 2],  # Part A - 6-10
-    [3, 3, 2, 2, 3],  # Part B - 1-5
-    [1, 2, 3, 2, 3]   # Part B - 6-10
+    [1, 3, 2, 2, 1],  # Part A - 11-15
+    [2, 3, 4, 3, 2],  # Part A - 6-10
+    [1, 3, 3, 2, 3],  # Part B - 1-5
+    [2, 2, 3, 2, 3]   # Part B - 6-10
 ]
 
 img = cv2.imread(pathImage)

@@ -50,8 +50,16 @@ This project aims to automate the process of evaluating OMR sheets and QR codes 
 3. **Store Results**:  
    - Results are saved in a structured format, ready for export to Google Sheets or Forms.
 
+### **OUTPUT** 
+
+| Image 1 | Image 2 |
+|:-------:|:-------:|
+| ![Original Image](1.jpg) | ![After Correction](2.jpg) |
+
+
 ### **Step 3: Manual Evaluation (Part C)**  
 Coding questions in Part C are evaluated manually due to their complexity.
+
 
 ---
 
