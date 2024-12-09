@@ -38,23 +38,29 @@ This project aims to automate the process of evaluating OMR sheets and QR codes 
 1. Students fill an online form.  
 2. A QR code is generated with their details (e.g., name, phone number, email ID, etc.).  
 3. QR codes are printed and stapled to the respective OMR sheets.
-
 ### **Step 2: Scan and Evaluate**
-1. **QR Code Scanning**:  
-   - Use the ZBar Python module to scan QR codes and fetch student details automatically.  
 
-2. **OMR Scanning**:  
-   - Use OpenCV to process OMR sheets.  
-   - Identify filled bubbles and calculate marks either part-wise or question-wise.  
+1. **QR Code Scanning**:
+   - Use the ZBar Python module to scan QR codes and fetch student details automatically.
 
-3. **Store Results**:  
+2. **OMR Scanning**:
+   - Use OpenCV to process OMR sheets.
+   - Identify filled bubbles and calculate marks either part-wise or question-wise.
+
+3. **Store Results**:
    - Results are saved in a structured format, ready for export to Google Sheets or Forms.
 
-### **OUTPUT** 
-
-| Image 1 | Image 2 |
-|:-------:|:-------:|
-| ![Original Image](1.jpg) | ![After Correction](2.jpg) |
+### **OUTPUT**
+<div style="display: flex;">
+    <div style="text-align: center; width: 50%;">
+        <p><strong>Before Correction</strong></p>
+        <img src="1.jpg" width="30%" style="margin-right: 10px;">
+    </div>
+    <div style="text-align: center; width: 50%;">
+        <p><strong>After Correction</strong></p>
+        <img src="2.png" width="30%" style="height: 1.5em;">
+    </div>
+</div>
 
 
 ### **Step 3: Manual Evaluation (Part C)**  
