@@ -45,7 +45,7 @@ def stackImage(imgArray, scale, labels=[]):
 
 def rectContours(contours):
     rect = []
-    maxArea = 0
+    
     for i in contours:
         area = cv2.contourArea(i)
         if area > 50:
